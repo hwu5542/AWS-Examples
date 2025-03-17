@@ -9,12 +9,14 @@
       pkgs.coreutils
       pkgs.findutils
       pkgs.tree
-      pkgs.awscli
+      pkgs.awscli2
    ];
 
   # Sets environment variables in the workspace
   env = {
     AWS_CLI_AUTO_PROMPT="on-partial";
+    BUCKET="BUCKET=testing-bucket-03162025";
+    # s3run="./s3/bash-scripts/";
   };
   idx = {
     # Search for the extensions you want on https://open-vsx.org/ and use "publisher.id"
