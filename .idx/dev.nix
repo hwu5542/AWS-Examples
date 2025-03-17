@@ -6,6 +6,9 @@
 
   # Use https://search.nixos.org/packages to find packages
   packages = [
+      pkgs.coreutils
+      pkgs.findutils
+      pkgs.tree
       pkgs.awscli
    ];
 
