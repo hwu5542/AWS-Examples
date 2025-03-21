@@ -10,7 +10,15 @@
       pkgs.findutils
       pkgs.tree
       pkgs.awscli2
+      pkgs.powershell
    ];
+
+# install AWS.Tools.Installer module
+# Install-Module -Name AWS.Tools.Installer -Force -Confirm:$false
+
+# Install AWS.Tools.EC2 and AWS.Tools.S3 modules
+# Install-AWSToolsModule -CleanUp -Module AWS.Tools.S3 -Force -Confirm:$false
+
 
   # Sets environment variables in the workspace
   env = {

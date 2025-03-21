@@ -1,4 +1,6 @@
 {
     "IDX.aI.enableInlineCompletion": false,
-    "IDX.aI.enableCodebaseIndexing": false
+    "IDX.aI.enableCodebaseIndexing": false,
+    "terminal.integrated.localEchoEnabled": "auto",
+    "terminal.integrated.localEchoLatencyThreshold": 30
 }
