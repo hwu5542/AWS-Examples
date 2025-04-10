@@ -1,0 +1,13 @@
+#! /usr/bin/env bash
+echo "==deploy s3 bucket via CFN"
+
+# https://docs.aws.amazon.com/cli/latest/reference/cloudformation/
+
+STACK_NAME "cfn-s3-simple"
+
+# prevents down time for service 
+aws cloudformation deploy \
+--template-file template.yaml \
+--no-execute-changeset \
+--region us-east-1 \
+--stack_name $STACK_NAME

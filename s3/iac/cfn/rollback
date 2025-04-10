@@ -1,0 +1,10 @@
+#! /usr/bin/env bash
+echo "==rollback s3 bucket via CFN"
+
+# https://docs.aws.amazon.com/cli/latest/reference/cloudformation/
+
+STACK_NAME "cfn-s3-simple"
+
+aws cloudformation delete-stack \
+--stack-name $STACK_NAME \
+--region us-east-1

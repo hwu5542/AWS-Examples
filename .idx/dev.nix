@@ -11,6 +11,9 @@
       pkgs.tree
       pkgs.awscli2
       pkgs.powershell
+      pkgs.jdk
+      pkgs.ruby
+      pkgs.maven3
    ];
 
 # install AWS.Tools.Installer module
@@ -23,7 +26,7 @@
   # Sets environment variables in the workspace
   env = {
     AWS_CLI_AUTO_PROMPT="on-partial";
-    BUCKET="BUCKET=testing-bucket-03162025";
+    BUCKET="my-valid-bucket-name-04102025";
     # s3run="./s3/bash-scripts/";
   };
   idx = {
