@@ -1,0 +1,22 @@
+{
+    "name": "AWS Dev Environment",
+    "image": "mcr.microsoft.com/devcontainers/base:ubuntu", // Ubuntu-based image
+    "features": {
+      "ghcr.io/devcontainers/features/node:1": {
+        "version": "latest" // For npm (required by AWS CDK)
+      },
+      "ghcr.io/devcontainers/features/aws-cli:1": {} // Optional: Pre-installs AWS CLI
+    },
+    "postCreateCommand": "sudo apt-get update && ./bin/terraform_cli_install.sh && echo 'Terraform installed' || echo 'Terraform failed to install' && ./bin/aws_cli_install.sh && sudo apt-get install -y tree && npm i -g aws-cdk",
+    "remoteEnv": {
+      "AWS_CLI_AUTO_PROMPT": "on-partial",
+      "BUCKET": "my-valid-bucket-name-04102025"
+    },
+    "customizations": {
+      "vscode": {
+        "extensions": [
+          "amazonwebservices.aws-toolkit-vscode" // AWS Toolkit for VSCode
+        ]
+      }
+    }
+}

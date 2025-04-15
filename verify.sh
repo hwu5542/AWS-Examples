@@ -1,0 +1,10 @@
+#!/bin/bash
+echo "=== Verification Script ==="
+echo "AWS CDK: $(cdk --version)"
+echo "Terraform: $(terraform --version)"
+echo "AWS CLI: $(aws --version)"
+echo "tree: $(tree --version)"
+echo "BUCKET: $BUCKET"
+echo "AWS_CLI_AUTO_PROMPT: $AWS_CLI_AUTO_PROMPT"
+echo "Node.js: $(node --version)"
+echo "npm: $(npm --version)"
