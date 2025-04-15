@@ -14,6 +14,7 @@
       pkgs.jdk
       pkgs.ruby
       pkgs.maven3
+      pkgs.terraform
    ];
 
 # install AWS.Tools.Installer module
