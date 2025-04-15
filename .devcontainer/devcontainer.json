@@ -7,7 +7,7 @@
       },
       "ghcr.io/devcontainers/features/aws-cli:1": {} // Optional: Pre-installs AWS CLI
     },
-    "postCreateCommand": "sudo apt-get update && ./bin/terraform_cli_install.sh && echo 'Terraform installed' || echo 'Terraform failed to install' && ./bin/aws_cli_install.sh && sudo apt-get install -y tree && npm i -g aws-cdk",
+    "postCreateCommand": "sudo apt-get update && ./bin/terraform_cli_install.sh && echo 'Terraform installed' || echo 'Terraform failed to install' && ./bin/aws_cli_install.sh && sudo apt-get install -y tree && npm i -g aws-cdk && sudo apt install python3.10-venv",
     "remoteEnv": {
       "AWS_CLI_AUTO_PROMPT": "on-partial",
       "BUCKET": "my-valid-bucket-name-04102025"
